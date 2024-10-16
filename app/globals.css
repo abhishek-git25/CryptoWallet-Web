@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+.card-shadow {
+  box-shadow: rgba(14, 30, 37, 0.5) 2px 2px 4px 0px, rgba(14, 30, 37, 0.5) 2px 2px 16px 0px;
+  cursor: pointer;
+}
+
+.card-shadow:hover {
+  box-shadow: rgba(14, 30, 37, 0.5) 4px 4px 8px 0px, rgba(14, 30, 37, 0.5) 4px 4px 32px 0px; /* Larger shadow on hover */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar on Chrome, Safari, and Edge */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
